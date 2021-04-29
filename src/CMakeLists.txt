@@ -7,17 +7,17 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt6 COMPONENTS Quick REQUIRED)
 
 set(SOURCES
-    fastblur.qrc
-    fastblur_global.h
-    fastblur.h
-    fastblur.cpp
+    graphicaleffects.qrc
+    graphicaleffects_global.h
+    graphicaleffects.h
+    graphicaleffects.cpp
     qgfxsourceproxyv2.h
     qgfxsourceproxyv2.cpp
 )
 
 if(WIN32 AND BUILD_SHARED_LIBS)
     enable_language(RC)
-    list(APPEND SOURCES fastblur.rc)
+    list(APPEND SOURCES graphicaleffects.rc)
 endif()
 
 add_library(${PROJECT_NAME} ${SOURCES})
@@ -29,7 +29,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 if(NOT BUILD_SHARED_LIBS)
     target_compile_definitions(${PROJECT_NAME} PUBLIC
-        FASTBLUR_STATIC
+        GRAPHICALEFFECTS_STATIC
     )
 endif()
 
@@ -44,7 +44,7 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     QT_NO_KEYWORDS
     QT_DEPRECATED_WARNINGS
     QT_DISABLE_DEPRECATED_BEFORE=0x060100
-    FASTBLUR_BUILD_LIBRARY
+    GRAPHICALEFFECTS_BUILD_LIBRARY
 )
 
 if(MSVC)

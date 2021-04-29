@@ -54,7 +54,7 @@
 #include <QtQuick/private/qquickitem_p.h>
 #include <QtQuick/private/qquickimage_p.h>
 
-QT_BEGIN_NAMESPACE
+GRAPHICALEFFECTS_BEGIN_NAMESPACE
 
 QGfxSourceProxyV2::QGfxSourceProxyV2(QQuickItem *parent) : QQuickItem(parent)
 {
@@ -127,12 +127,12 @@ bool QGfxSourceProxyV2::isActive() const
     return m_output && (m_output != m_input);
 }
 
-void QGfxSourceProxyV2::setInterpolation(Interpolation i)
+void QGfxSourceProxyV2::setInterpolation(const Interpolation interpolation)
 {
-    if (m_interpolation == i) {
+    if (m_interpolation == interpolation) {
         return;
     }
-    m_interpolation = i;
+    m_interpolation = interpolation;
     polish();
     Q_EMIT interpolationChanged();
 }
@@ -240,4 +240,4 @@ void QGfxSourceProxyV2::updatePolish()
     }
 }
 
-QT_END_NAMESPACE
+GRAPHICALEFFECTS_END_NAMESPACE

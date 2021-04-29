@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
-project(FastBlur VERSION 1.0.0.0 LANGUAGES CXX)
+project(GraphicalEffects VERSION 1.0.0.0 LANGUAGES CXX)
 
 option(BUILD_DEMO "Build demo application." ON)
 
@@ -38,5 +38,5 @@ endif()
 
 add_subdirectory(src)
 if(BUILD_DEMO)
-    add_subdirectory(example)
+    #add_subdirectory(example)
 endif()

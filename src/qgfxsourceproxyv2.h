@@ -51,17 +51,19 @@
 
 #pragma once
 
-#include "fastblur_global.h"
+#include "graphicaleffects_global.h"
 #include <QtQuick/qquickitem.h>
 
 QT_BEGIN_NAMESPACE
-
 QT_FORWARD_DECLARE_CLASS(QQuickShaderEffectSource)
+QT_END_NAMESPACE
 
-class FASTBLUR_API QGfxSourceProxyV2 : public QQuickItem
+GRAPHICALEFFECTS_BEGIN_NAMESPACE
+
+class GRAPHICALEFFECTS_API QGfxSourceProxyV2 : public QQuickItem
 {
     Q_OBJECT
-    QML_ELEMENT
+    QML_NAMED_ELEMENT(SourceProxy)
     Q_DISABLE_COPY_MOVE(QGfxSourceProxyV2)
     Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
 
@@ -72,9 +74,9 @@ class FASTBLUR_API QGfxSourceProxyV2 : public QQuickItem
     Q_PROPERTY(Interpolation interpolation READ interpolation WRITE setInterpolation NOTIFY interpolationChanged)
 
 public:
-    enum class Interpolation : int
+    enum class Interpolation
     {
-        Any = 0,
+        Any,
         Nearest,
         Linear
     };
@@ -94,7 +96,7 @@ public:
 
     bool isActive() const;
 
-    void setInterpolation(Interpolation i);
+    void setInterpolation(const Interpolation interpolation);
     Interpolation interpolation() const;
 
 protected:
@@ -123,4 +125,4 @@ private:
     Interpolation m_interpolation = Interpolation::Any;
 };
 
-QT_END_NAMESPACE
+GRAPHICALEFFECTS_END_NAMESPACE

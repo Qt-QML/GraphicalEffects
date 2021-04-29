@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/wangwenx190/Qt5Compat/GraphicalEffects">
-        <file>shaders_ng/fastblur.frag.qsb</file>
-        <file>shaders_ng/fastblur_internal.vert.qsb</file>
-        <file>shaders_ng/fastblur_internal.frag.qsb</file>
-        <file alias="FastBlur.qml">qml/fastblur.qml</file>
-    </qresource>
-</RCC>

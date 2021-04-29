@@ -50,11 +50,10 @@
 
 #pragma once
 
-#include "fastblur_global.h"
+#include "graphicaleffects_global.h"
 
-namespace wangwenx190::FastBlur
-{
+GRAPHICALEFFECTS_BEGIN_NAMESPACE
 
-FASTBLUR_API void registerModule();
+GRAPHICALEFFECTS_API void registerModule();
 
-}
+GRAPHICALEFFECTS_END_NAMESPACE

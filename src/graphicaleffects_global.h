@@ -48,19 +48,47 @@
 **
 ****************************************************************************/
 
-#include "fastblur.h"
-#include "qgfxsourceproxyv2.h"
+#pragma once
 
-static const char QtQuickURI[] = "org.wangwenx190.Qt5Compat.GraphicalEffects";
+#include <QtCore/qglobal.h>
 
-static inline void initFastBlurResources()
-{
-    Q_INIT_RESOURCE(fastblur);
-}
+#ifndef GRAPHICALEFFECTS_API
+#ifdef GRAPHICALEFFECTS_STATIC
+#define GRAPHICALEFFECTS_API
+#else
+#ifdef GRAPHICALEFFECTS_BUILD_LIBRARY
+#define GRAPHICALEFFECTS_API Q_DECL_EXPORT
+#else
+#define GRAPHICALEFFECTS_API Q_DECL_IMPORT
+#endif
+#endif
+#endif
 
-void wangwenx190::FastBlur::registerModule()
-{
-    initFastBlurResources();
-    qmlRegisterType<QGfxSourceProxyV2>(QtQuickURI, 1, 0, "SourceProxy");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastBlur.qml")), QtQuickURI, 1, 0, "FastBlur");
-}
+#if defined(Q_OS_WIN) && !defined(Q_OS_WINDOWS)
+#define Q_OS_WINDOWS
+#endif
+
+#ifndef Q_DISABLE_MOVE
+#define Q_DISABLE_MOVE(Class) \
+    Class(Class &&) = delete; \
+    Class &operator=(Class &&) = delete;
+#endif
+
+#ifndef Q_DISABLE_COPY_MOVE
+#define Q_DISABLE_COPY_MOVE(Class) \
+    Q_DISABLE_COPY(Class) \
+    Q_DISABLE_MOVE(Class)
+#endif
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0))
+#define qAsConst(i) std::as_const(i)
+#endif
+
+#ifndef GRAPHICALEFFECTS_NAMESPACE
+#define GRAPHICALEFFECTS_NAMESPACE wangwenx190::Qt5Compat::GraphicalEffects
+#endif
+
+#define GRAPHICALEFFECTS_BEGIN_NAMESPACE namespace GRAPHICALEFFECTS_NAMESPACE {
+#define GRAPHICALEFFECTS_END_NAMESPACE }
+#define GRAPHICALEFFECTS_PREPEND_NAMESPACE(x) ::GRAPHICALEFFECTS_NAMESPACE::x
+#define GRAPHICALEFFECTS_USE_NAMESPACE using namespace GRAPHICALEFFECTS_NAMESPACE;

@@ -67,16 +67,16 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName",      "wangwenx190"
-            VALUE "FileDescription",  "FastBlur - Qt Quick Graphical Effects"
+            VALUE "CompanyName",      "The Qt Company Ltd."
+            VALUE "FileDescription",  "Qt Quick Graphical Effects"
             VALUE "FileVersion",      "1.0.0.0"
             VALUE "LegalCopyright",   "BSD License"
             #ifdef _DEBUG
-            VALUE "OriginalFilename", "FastBlurd.dll"
+            VALUE "OriginalFilename", "GraphicalEffectsd.dll"
             #else
-            VALUE "OriginalFilename", "FastBlur.dll"
+            VALUE "OriginalFilename", "GraphicalEffects.dll"
             #endif
-            VALUE "ProductName",      "FastBlur"
+            VALUE "ProductName",      "Qt5Compat GraphicalEffects"
             VALUE "ProductVersion",   "1.0.0.0"
         END
     END
