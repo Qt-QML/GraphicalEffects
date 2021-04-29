@@ -68,7 +68,7 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName",      "wangwenx190"
-            VALUE "FileDescription",  "FastBlur - Qt Quick Graphic Effect"
+            VALUE "FileDescription",  "FastBlur - Qt Quick Graphical Effects"
             VALUE "FileVersion",      "1.0.0.0"
             VALUE "LegalCopyright",   "BSD License"
             #ifdef _DEBUG
