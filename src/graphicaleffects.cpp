@@ -62,7 +62,6 @@ void GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)()
 {
     initGraphicalEffectsResources();
     qmlRegisterType<QGfxSourceProxyV2>(__graphicaleffects_uri, 1, 0, "SourceProxy");
-    //qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastBlur.qml")), __graphicaleffects_uri, 1, 0, "FastBlur");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/BrightnessContrast.qml")), __graphicaleffects_uri, 1, 0, "BrightnessContrast");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Colorize.qml")), __graphicaleffects_uri, 1, 0, "Colorize");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ColorOverlay.qml")), __graphicaleffects_uri, 1, 0, "ColorOverlay");
@@ -70,6 +69,7 @@ void GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)()
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Desaturate.qml")), __graphicaleffects_uri, 1, 0, "Desaturate");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Displace.qml")), __graphicaleffects_uri, 1, 0, "Displace");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/DropShadow.qml")), __graphicaleffects_uri, 1, 0, "DropShadow");
+    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastBlur.qml")), __graphicaleffects_uri, 1, 0, "FastBlur");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastGlow.qml")), __graphicaleffects_uri, 1, 0, "FastGlow");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/GammaAdjust.qml")), __graphicaleffects_uri, 1, 0, "GammaAdjust");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Glow.qml")), __graphicaleffects_uri, 1, 0, "Glow");
