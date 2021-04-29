@@ -85,25 +85,4 @@ void GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)()
     GRAPHICALEFFECTS_REGISTER_QML_TYPE(RadialGradient);
     GRAPHICALEFFECTS_REGISTER_QML_TYPE(RectangularGlow);
     GRAPHICALEFFECTS_REGISTER_QML_TYPE(ThresholdMask);
-
-#if 0
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/BrightnessContrast.qml")), __graphicaleffects_uri, 1, 0, "BrightnessContrast");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Colorize.qml")), __graphicaleffects_uri, 1, 0, "Colorize");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ColorOverlay.qml")), __graphicaleffects_uri, 1, 0, "ColorOverlay");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ConicalGradient.qml")), __graphicaleffects_uri, 1, 0, "ConicalGradient");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Desaturate.qml")), __graphicaleffects_uri, 1, 0, "Desaturate");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Displace.qml")), __graphicaleffects_uri, 1, 0, "Displace");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/DropShadow.qml")), __graphicaleffects_uri, 1, 0, "DropShadow");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastBlur.qml")), __graphicaleffects_uri, 1, 0, "FastBlur");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastGlow.qml")), __graphicaleffects_uri, 1, 0, "FastGlow");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/GammaAdjust.qml")), __graphicaleffects_uri, 1, 0, "GammaAdjust");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Glow.qml")), __graphicaleffects_uri, 1, 0, "Glow");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/HueSaturation.qml")), __graphicaleffects_uri, 1, 0, "HueSaturation");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/LevelAdjust.qml")), __graphicaleffects_uri, 1, 0, "LevelAdjust");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/LinearGradient.qml")), __graphicaleffects_uri, 1, 0, "LinearGradient");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/OpacityMask.qml")), __graphicaleffects_uri, 1, 0, "OpacityMask");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/RadialGradient.qml")), __graphicaleffects_uri, 1, 0, "RadialGradient");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/RectangularGlow.qml")), __graphicaleffects_uri, 1, 0, "RectangularGlow");
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ThresholdMask.qml")), __graphicaleffects_uri, 1, 0, "ThresholdMask");
-#endif
 }
