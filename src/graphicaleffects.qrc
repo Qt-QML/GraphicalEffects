@@ -41,5 +41,6 @@
         <file>shaders_ng/radialgradient_nomask.frag.qsb</file>
         <file>shaders_ng/rectangularglow.frag.qsb</file>
         <file>shaders_ng/thresholdmask.frag.qsb</file>
+        <file>qml/FastBlur.qml</file>
     </qresource>
 </RCC>

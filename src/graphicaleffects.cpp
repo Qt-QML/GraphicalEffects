@@ -51,6 +51,9 @@
 #include "graphicaleffects.h"
 #include "qgfxsourceproxyv2.h"
 
+#define GRAPHICALEFFECTS_REGISTER_QML_TYPE(name) \
+    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/" #name ".qml")), __graphicaleffects_uri, 1, 0, #name)
+
 static const char __graphicaleffects_uri[] = "org.wangwenx190.Qt5Compat.GraphicalEffects";
 
 static inline void initGraphicalEffectsResources()
@@ -61,7 +64,29 @@ static inline void initGraphicalEffectsResources()
 void GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)()
 {
     initGraphicalEffectsResources();
+
     qmlRegisterType<QGfxSourceProxyV2>(__graphicaleffects_uri, 1, 0, "SourceProxy");
+
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(BrightnessContrast);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(Colorize);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(ColorOverlay);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(ConicalGradient);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(Desaturate);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(Displace);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(DropShadow);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(FastBlur);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(FastGlow);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(GammaAdjust);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(Glow);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(HueSaturation);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(LevelAdjust);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(LinearGradient);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(OpacityMask);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(RadialGradient);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(RectangularGlow);
+    GRAPHICALEFFECTS_REGISTER_QML_TYPE(ThresholdMask);
+
+#if 0
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/BrightnessContrast.qml")), __graphicaleffects_uri, 1, 0, "BrightnessContrast");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/Colorize.qml")), __graphicaleffects_uri, 1, 0, "Colorize");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ColorOverlay.qml")), __graphicaleffects_uri, 1, 0, "ColorOverlay");
@@ -80,4 +105,5 @@ void GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)()
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/RadialGradient.qml")), __graphicaleffects_uri, 1, 0, "RadialGradient");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/RectangularGlow.qml")), __graphicaleffects_uri, 1, 0, "RectangularGlow");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/ThresholdMask.qml")), __graphicaleffects_uri, 1, 0, "ThresholdMask");
+#endif
 }
