@@ -1,6 +1,6 @@
-# FastBlur - Qt Quick Graphical Effects
+# Qt Quick Graphical Effects
 
-FastBlur QML type extracted from official Qt5Compat repository, with minor modifications.
+GraphicalEffects QML types extracted from official Qt5Compat repository, with minor modifications.
 
 ## License
 
