@@ -23,6 +23,10 @@ endif()
 add_library(${PROJECT_NAME} ${SOURCES})
 add_library(wangwenx190::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
+target_include_directories(${PROJECT_NAME} PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>"
+)
+
 if(NOT BUILD_SHARED_LIBS)
     target_compile_definitions(${PROJECT_NAME} PUBLIC
         FASTBLUR_STATIC

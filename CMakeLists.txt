@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
 project(FastBlur VERSION 1.0.0.0 LANGUAGES CXX)
 
+option(BUILD_DEMO "Build demo application." ON)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -35,3 +37,6 @@ if(NOT CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
 endif()
 
 add_subdirectory(src)
+if(BUILD_DEMO)
+    add_subdirectory(example)
+endif()

@@ -53,8 +53,14 @@
 
 static const char QtQuickURI[] = "org.wangwenx190.Qt5Compat.GraphicalEffects";
 
+static inline void initFastBlurResources()
+{
+    Q_INIT_RESOURCE(fastblur);
+}
+
 void wangwenx190::FastBlur::registerModule()
 {
+    initFastBlurResources();
     qmlRegisterType<QGfxSourceProxyV2>(QtQuickURI, 1, 0, "SourceProxy");
     qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/FastBlur.qml")), QtQuickURI, 1, 0, "FastBlur");
 }
