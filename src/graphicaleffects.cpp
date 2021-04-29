@@ -52,7 +52,7 @@
 #include "qgfxsourceproxyv2.h"
 
 #define GRAPHICALEFFECTS_REGISTER_QML_TYPE(name) \
-    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/" #name ".qml")), __graphicaleffects_uri, 1, 0, #name)
+    qmlRegisterType(QUrl(QStringLiteral("qrc:///wangwenx190/Qt5Compat/GraphicalEffects/qml/" #name ".qml")), __graphicaleffects_uri, 1, 0, #name)
 
 static const char __graphicaleffects_uri[] = "org.wangwenx190.Qt5Compat.GraphicalEffects";
 

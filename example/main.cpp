@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
+#include <graphicaleffects.h>
 #include <QtCore/qloggingcategory.h>
 #include <QtGui/qguiapplication.h>
 #include <QtQml/qqmlapplicationengine.h>
 #include <QtQuickControls2/qquickstyle.h>
 #include <QtQuick/qquickwindow.h>
-#include <fastblur.h>
 
 int main(int argc, char *argv[])
 {
@@ -40,26 +40,25 @@ int main(int argc, char *argv[])
     QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
     QQuickStyle::setStyle(QStringLiteral("Basic"));
 
-    wangwenx190::FastBlur::registerModule();
+    GRAPHICALEFFECTS_PREPEND_NAMESPACE(registerModule)();
 
-    const QUrl mainQmlUrl(QStringLiteral("qrc:///qml/main.qml"));
+    const QUrl homePageUrl(QStringLiteral("qrc:///qml/main.qml"));
+
     const QMetaObject::Connection connection = QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreated,
-        &application,
-        [&mainQmlUrl, &connection](QObject *object, const QUrl &url) {
-            if (url != mainQmlUrl) {
+        &engine, &QQmlApplicationEngine::objectCreated, &application,
+        [&homePageUrl, &connection](QObject *object, const QUrl &url){
+            if (url != homePageUrl) {
                 return;
             }
-            if (!object) {
-                QGuiApplication::exit(-1);
-            } else {
+            if (object) {
                 QObject::disconnect(connection);
+            } else {
+                QGuiApplication::exit(-1);
             }
         },
         Qt::QueuedConnection);
 
-    engine.load(mainQmlUrl);
+    engine.load(homePageUrl);
 
     return QGuiApplication::exec();
 }

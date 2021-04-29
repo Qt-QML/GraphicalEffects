@@ -21,7 +21,7 @@ add_executable(Demo WIN32 ${SOURCES})
 target_link_libraries(Demo PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
-    wangwenx190::FastBlur
+    wangwenx190::GraphicalEffects
 )
 
 target_compile_definitions(Demo PRIVATE

@@ -1,6 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/main.qml</file>
-        <file>images/test.png</file>
+        <file>images/glass_normal.png</file>
+        <file>images/bug.jpg</file>
+        <file>images/butterfly.png</file>
+        <file>images/checker.png</file>
+        <file>images/fog.png</file>
     </qresource>
 </RCC>
